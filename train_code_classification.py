@@ -33,10 +33,10 @@ from keras_self_attention  import SeqSelfAttention
 from transformers import BertTokenizer
 
 
-TRAIN_CSV = '/codeclone_data/code_classification_data_for_Ccode.csv'
+TRAIN_CSV = '/data/code_classification_data_for_Ccode.csv'
 
-SOURCE_CODE_EMBEDDING_FILE = '/codeclone_data/train_xe_bin.abcc.code.gz'
-FIG_SAVING_DIR='/codeclone_data/figures/'
+SOURCE_CODE_EMBEDDING_FILE = '/data/train_xe_bin.abcc.code.gz'
+FIG_SAVING_DIR='/data/figures/'
 source_code_embedding_file = os.path.join(os.getcwd(), *SOURCE_CODE_EMBEDDING_FILE.split('/'))
 
 word2vec = KeyedVectors.load_word2vec_format(source_code_embedding_file,binary=True)
