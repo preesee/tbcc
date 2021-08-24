@@ -5,30 +5,7 @@ from tensorflow.keras import layers
 from tensorflow.keras.initializers import Constant
 from tensorflow.keras.layers import MultiHeadAttention
 
-from keras.datasets import imdb
 
-
-from keras.datasets import reuters
-
-# (x_train, y_train), (x_test, y_test) = reuters.load_data(path="reuters.npz",
-#                                                          num_words=None,
-#                                                          skip_top=0,
-#                                                          maxlen=None,
-#                                                          test_split=0.2,
-#                                                          seed=113,
-#                                                          start_char=1,
-#                                                          oov_char=2,
-#                                                          index_from=3)
-
-# (x_train, y_train), (x_test, y_test) = imdb.load_data(path="imdb.npz",
-#                                                       num_words=None,
-#                                                       skip_top=0,
-#                                                       maxlen=None,
-#                                                       seed=113,
-#                                                       start_char=1,
-#                                                       oov_char=2,
-#                                                       index_from=3)
-# print('')
 class MultiHeadSelfAttention(layers.Layer):
     def __init__(self, embed_dim, num_heads=8):
         super(MultiHeadSelfAttention, self).__init__()
